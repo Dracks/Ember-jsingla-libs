@@ -1,0 +1,18 @@
+
+<div class="jumbotron">
+
+	<form class="form-signin">
+		<h2 class="form-signin-heading">{{titleText}}</h2>
+		{{#feedback-message isShowed=message.show timer=null type="error" hasCloseButton=false}}
+			{{message.text}}
+		{{/feedback-message}}
+
+		<label for="identification">{{userText}}:</label>
+		{{view Ember.TextField value=username class="form-control" placeholder=userText}}
+		<label for="password">{{passwordText}}:</label>
+		{{view Ember.TextField type='password' class="form-control" value=password placeholder=passwordText}}
+		<div>
+			<button class="btn btn-lg btn-primary btn-block" {{action "login"}}>{{loginText}}</button>
+		</div>
+	</form>
+</div>
