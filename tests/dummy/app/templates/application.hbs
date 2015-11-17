@@ -1,3 +1,9 @@
 <h2 id="title">Welcome to Ember</h2>
 
 {{outlet}}
+
+{{bd-select content=selectList selectedValue=selectValue}}
+
+{{#bd-feedback-message isShowed='true' type=message.type timer=message.timer}}
+	{{message.text}}
+{{/bd-feedback-message}}

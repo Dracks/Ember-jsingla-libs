@@ -1,14 +1,16 @@
 import Ember from 'ember';
+import layout from '../templates/components/bd-feedback-message';
 
 export default Ember.Component.extend({
 	classNames: ['alert', 'alert-dismissible','message-box'],
 	classNameBindings:["bootstrapType", "isShowed:in"],
+	layout: layout,
 	isShowed:true,
 	hasCloseButton:true,
 	timer:null,
 	timerId:null,
 	type:"info",
-	bootstrapType:function (){
+	bootstrapType:Ember.computed('type', function (){
 		var tag="success";
 		var type=this.get('type').toLowerCase();
 		if (type=="error"){
@@ -17,8 +19,8 @@ export default Ember.Component.extend({
 			tag="warning"
 		}
 		return "alert-"+tag;
-	}.property('type'),
-	showObserver: function (){
+	}),
+	showObserver: Ember.computed('isShowed',function (){
 		if (this.get('isShowed')==true){
 			var _this=this;
 			var timer=this.get('timer');
@@ -37,7 +39,7 @@ export default Ember.Component.extend({
 				Ember.run.cancel(timerId);
 			}
 		}
-	}.observes('isShowed'),
+	}),
 	hide: function (){
 		this.set('isShowed', false);
 	},

@@ -1,1 +1,1 @@
-export { default } from 'binding-libs/components/bd-selecting.js';
+export { default } from 'ember-binding-libs/components/bd-select';
