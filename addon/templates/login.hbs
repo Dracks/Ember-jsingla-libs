@@ -8,9 +8,9 @@
 		{{/bd-feedback-message}}
 
 		<label for="identification">{{userText}}:</label>
-		{{view Ember.TextField value=username class="form-control" placeholder=userText}}
+		{{input type="text" value=username class="form-control" placeholder=userText}}
 		<label for="password">{{passwordText}}:</label>
-		{{view Ember.TextField type='password' class="form-control" value=password placeholder=passwordText}}
+		{{input type='password' class="form-control" value=password placeholder=passwordText}}
 		<div>
 			<button class="btn btn-lg btn-primary btn-block" {{action "login"}}>{{loginText}}</button>
 		</div>
