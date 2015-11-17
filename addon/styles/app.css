@@ -1,0 +1,14 @@
+.message-box{
+	opacity: 0;
+	height: 0;
+	padding: 0;
+	-webkit-transition: opacity .5s linear, height .5s linear;
+	-o-transition: opacity .5s linear, height .5s linear;
+	transition: opacity .5s linear, height .5s linear;
+}
+
+.message-box.in {
+	height: auto;
+	opacity:1;
+	padding: 15px;
+}
