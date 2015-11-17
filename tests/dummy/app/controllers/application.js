@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import FeedbackMessage from 'ember-binding-libs/utils/feedback-message'
 
 export default Ember.Controller.extend({
 	selectList: [Ember.Object.create({
@@ -31,6 +32,11 @@ export default Ember.Controller.extend({
 					type: "other"
 				});
 			}
+		}
+	}),
+	message2: Ember.computed({
+		get(){
+			return FeedbackMessage.error("Hi world!", 150);
 		}
 	})
 });
