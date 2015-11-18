@@ -1,10 +1,11 @@
 // addon/authenticators/bd-oauth.js
 import Ember from 'ember'
 import OAuth2PasswordGrant from 'ember-simple-auth/authenticators/oauth2-password-grant';
-import ENV from "../config/environment"
+//import ENV from 'ember-binding-libs/config/environment';
 
 export default OAuth2PasswordGrant.extend({
-	clientId: [ENV.API_CLIENT_ID, ENV.API_CLIENT_SECRET],
+	//clientId: [ENV.OAUTH.CLIENT_ID, ENV.OAUTH.CLIENT_SECRET],
+	clientId: [],
 
 	makeRequest(url, data) {
 		var options = {

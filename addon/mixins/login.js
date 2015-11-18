@@ -11,6 +11,8 @@ export default Ember.Mixin.create({
 	username: "",
 	password: "",
 
+	oauth: 'bd-oauth',
+
 	message: {
 		show:false,
 		message:""
@@ -20,7 +22,8 @@ export default Ember.Mixin.create({
 		var username=this.get('username');
 		var password=this.get('password');
 		if (username.length>0 && password.length>0) {
-			return this.get('session').authenticate('authenticator:bd-oauth', username, password)
+			var authenticator=this.get('oauth');
+			return this.get('session').authenticate('authenticator:'+authenticator, username, password)
 		} else {
 			return "login.errors.no-data"
 		}
