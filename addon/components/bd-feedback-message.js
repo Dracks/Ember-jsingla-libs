@@ -12,7 +12,12 @@ export default Ember.Component.extend({
 	type:"info",
 	bootstrapType:Ember.computed('type', function (){
 		var tag="success";
-		var type=this.get('type').toLowerCase();
+		var type=this.get('type');
+		if (type){
+			type=type.toLowerCase();
+		} else {
+			type="info"
+		}
 		if (type=="error"){
 			tag="danger"
 		} else if (type=="warning"){

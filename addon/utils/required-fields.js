@@ -5,7 +5,7 @@ export default function requiredFields(object, listFields, minLength) {
 	var errors=[];
 	listFields.forEach(function (field){
 		var data = object.get(field);
-		if ( data === undefined || data === null || data.length<minLength){
+		if ( data === undefined || data === null || data.length<=minLength){
 			errors.push(field);
 		}
 	});
