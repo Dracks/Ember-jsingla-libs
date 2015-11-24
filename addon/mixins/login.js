@@ -23,9 +23,9 @@ export default Ember.Mixin.create({
 		var password=this.get('password');
 		if (username.length>0 && password.length>0) {
 			var authenticator=this.get('oauth');
-			return this.get('session').authenticate('authenticator:'+authenticator, username, password)
+			return this.get('session').authenticate('authenticator:'+authenticator, username, password);
 		} else {
-			return "login.errors.no-data"
+			return "login.errors.no-data";
 		}
 	}
 });

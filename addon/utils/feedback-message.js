@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default {
 	empty(){
 		return Ember.Object.create({
@@ -5,7 +7,7 @@ export default {
 			text: "",
 			timer: null,
 			show: false
-		})
+		});
 	},
 	base(message, timer){
 		return Ember.Object.create({
@@ -18,7 +20,7 @@ export default {
 	error(message, timer){
 		var err=this.base(message, timer);
 		err.set('type', 'error');
-		return err
+		return err;
 	},
 	warning(message, timer){
 		var err=this.base(message, timer);

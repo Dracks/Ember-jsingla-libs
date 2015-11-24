@@ -16,17 +16,17 @@ export default Ember.Component.extend({
 		if (type){
 			type=type.toLowerCase();
 		} else {
-			type="info"
+			type="info";
 		}
-		if (type=="error"){
-			tag="danger"
-		} else if (type=="warning"){
-			tag="warning"
+		if (type==="error"){
+			tag="danger";
+		} else if (type==="warning"){
+			tag="warning";
 		}
 		return "alert-"+tag;
 	}),
 	showObserver: Ember.computed('isShowed',function (){
-		if (this.get('isShowed')==true){
+		if (this.get('isShowed')===true){
 			var _this=this;
 			var timer=this.get('timer');
 			if (parseInt(timer)>0){

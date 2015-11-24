@@ -16,7 +16,7 @@ export default Ember.Component.extend({
 		}
 	}),
 
-	initAttributes: Ember.on('didInitAttrs', function (attrs) {
+	initAttributes: Ember.on('didInitAttrs', function () {
 		//this._super(...arguments);
 		var content = this.get('content');
 
@@ -28,7 +28,7 @@ export default Ember.Component.extend({
 	change(args){
 		const id=args.currentTarget.value;
 		const selectedValue = this.get('content').find( function (e){
-			return e.get('id')==id;
+			return e.get('id')===id;
 		});
 
 		this.set('selectedValue', selectedValue);
