@@ -1,0 +1,6 @@
+{{#each selectList as |select|}}
+	{{#if select.content}}
+		{{bd-select content=select.content selectedValue=select.value class="form-control"}}
+	{{/if}}
+	{{select.separator}}
+{{/each}}
