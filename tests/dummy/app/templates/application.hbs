@@ -4,7 +4,8 @@
 
 {{bd-select content=selectList selectedValue=selectValue}}
 
-{{bd-date-picker format="dd/mm/yyyy"}}
+{{date}}
+{{bd-date-picker format="dd/mm/yyyy" value=date}}
 
 {{#bd-feedback-message isShowed='true' type=message.type timer=message.timer}}
 	{{message.text}}

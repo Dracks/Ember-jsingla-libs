@@ -2,6 +2,7 @@ import Ember from 'ember';
 import FeedbackMessage from 'ember-binding-libs/utils/feedback-message'
 
 export default Ember.Controller.extend({
+	date: Date(),
 	selectList: [Ember.Object.create({
 		id:1,
 		name: "Info",

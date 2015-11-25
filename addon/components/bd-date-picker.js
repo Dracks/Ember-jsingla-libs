@@ -5,6 +5,7 @@ import layout from '../templates/components/bd-date-picker';
 export default Ember.Component.extend({
 	layout: layout,
 	format: 'dd/mm/yyyy',
+	classNames: ["form-inline"],
 	value: null,
 	_day: Ember.computed('value', function (){
 		var value=this.get('value');
@@ -64,7 +65,7 @@ export default Ember.Component.extend({
 		}
 		for (var i=start; i<=end; i++){
 			ret.push(Ember.Object.create({
-				id:i,
+				id:""+i,
 				name: (prefix+i).substr(-size)
 			}));
 		}
@@ -75,6 +76,7 @@ export default Ember.Component.extend({
 		return parsed.map(function (e){
 			var newE={};
 			newE.separator=e.separator;
+			newE.element=e.element;
 			var size=e.size;
 			var start=0;
 			var end=10;
@@ -110,12 +112,30 @@ export default Ember.Component.extend({
 			}
 			newE.content=list;
 			newE.value=list.find(function (e){
-				return e.get('id')==value;
+				return e.get('id')===""+value;
 			});
 			return Ember.Object.create(newE);
 		}.bind(this));
 	}),
-	selectObserver: Ember.observer('selectList.[].value', function (){
-
-	})
+	actions: {
+		updateValue(){
+			var selectList=this.get('selectList');
+			var currentValue = moment(this.get('value'));
+			selectList.forEach(function (e){
+				var id=e.get('value.id');
+				switch(e.element){
+					case "d":
+						currentValue.date(id);
+						break;
+					case "m":
+						currentValue.month(parseInt(id));
+						break;
+					case "y":
+						currentValue.year(id);
+						break;
+				}
+			});
+			this.set('value', currentValue.toDate());
+		},
+	}
 });
