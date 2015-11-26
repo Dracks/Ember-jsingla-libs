@@ -1,1 +1,1 @@
-export { default } from 'ember-binding-libs/styles/app'
+export { default } from 'ember-dracks-libs/styles/app'

@@ -1,1 +1,1 @@
-export { default } from 'ember-binding-libs/utils/feedback-message';
+export { default } from 'ember-dracks-libs/utils/feedback-message';

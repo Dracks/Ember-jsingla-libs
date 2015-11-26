@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 //import moment from 'moment';
 
-moduleForComponent('bd-date-picker', 'Unit | Component | bd date picker');
+moduleForComponent('js-date-picker', 'Unit | Component | bd date picker');
 
 test('Formatting elements', function (assert) {
 	var component = this.subject();

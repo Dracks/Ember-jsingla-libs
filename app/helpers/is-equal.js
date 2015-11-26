@@ -1,1 +1,1 @@
-export { default, isEqual } from 'ember-binding-libs/helpers/is-equal';
+export { default, isEqual } from 'ember-dracks-libs/helpers/is-equal';

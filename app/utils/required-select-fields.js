@@ -1,1 +1,1 @@
-export { default } from 'ember-binding-libs/utils/required-select-fields';
+export { default } from 'ember-dracks-libs/utils/required-select-fields';

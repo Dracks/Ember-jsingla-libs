@@ -2,18 +2,18 @@
 
 {{outlet}}
 
-{{bd-select content=selectList selectedValue=selectValue}}
+{{js-select content=selectList selectedValue=selectValue}}
 
 {{date}}
-{{bd-date-picker format="dd/mm/yyyy" value=date}}
+{{js-date-picker format="dd/mm/yyyy" value=date}}
 
-{{#bd-feedback-message isShowed='true' type=message.type timer=message.timer}}
+{{#js-feedback-message isShowed='true' type=message.type timer=message.timer}}
 	{{message.text}}
-{{/bd-feedback-message}}
+{{/js-feedback-message}}
 
-{{#bd-feedback-message isShowed=message2.show type=message2.type timer=message2.timer}}
+{{#js-feedback-message isShowed=message2.show type=message2.type timer=message2.timer}}
 	{{message2.text}}
-{{/bd-feedback-message}}
+{{/js-feedback-message}}
 
 {{render "login"}}
 
