@@ -1,5 +1,5 @@
 {
-  "name": "ember-dracks-libs",
+  "name": "ember-jsingla-libs",
   "dependencies": {
     "ember": "1.13.10",
     "ember-cli-shims": "0.0.6",

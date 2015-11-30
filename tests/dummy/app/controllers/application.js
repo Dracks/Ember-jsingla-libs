@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import FeedbackMessage from 'ember-dracks-libs/utils/feedback-message'
+import FeedbackMessage from 'ember-jsingla-libs/utils/feedback-message'
 
 export default Ember.Controller.extend({
 	date: Date(),

@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-	name: 'ember-binding-libs'
+	name: 'ember-jsingla-libs'
 };

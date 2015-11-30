@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import LoginMixin from 'ember-dracks-libs/mixins/login';
+import LoginMixin from 'ember-jsingla-libs/mixins/login';
 
 export default Ember.Controller.extend(LoginMixin,{
 	actions: {

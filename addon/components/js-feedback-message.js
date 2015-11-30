@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/bd-feedback-message';
+import layout from '../templates/components/js-feedback-message';
 
 export default Ember.Component.extend({
 	classNames: ['alert', 'alert-dismissible','message-box'],

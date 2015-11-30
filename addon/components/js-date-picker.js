@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/bd-date-picker';
+import layout from '../templates/components/js-date-picker';
 //import moment from 'moment';
 
 export default Ember.Component.extend({

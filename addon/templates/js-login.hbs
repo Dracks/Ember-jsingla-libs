@@ -3,9 +3,9 @@
 
 		<form class="form-signin">
 			<h2 class="form-signin-heading">{{titleText}}</h2>
-			{{#bd-feedback-message isShowed=message.show timer=null type="error" hasCloseButton=false}}
+			{{#js-feedback-message isShowed=message.show timer=null type="error" hasCloseButton=false}}
 				{{message.text}}
-			{{/bd-feedback-message}}
+			{{/js-feedback-message}}
 
 			{{partial "js-login-form"}}
 			<div>

@@ -11,7 +11,7 @@ export default Ember.Mixin.create({
 	username: "",
 	password: "",
 
-	oauth: 'bd-oauth',
+	oauth: 'js-oauth',
 
 	message: {
 		show:false,

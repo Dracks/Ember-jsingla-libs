@@ -1,5 +1,5 @@
 import Ember from "ember";
-import layout from '../templates/components/bd-select';
+import layout from '../templates/components/js-select';
 
 
 export default Ember.Component.extend({

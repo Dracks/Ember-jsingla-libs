@@ -1,6 +1,6 @@
 {{#each selectList as |select|}}
 	{{#if select.content}}
-		{{bd-select content=select.content selectedValue=select.value class="form-control" action="updateValue"}}
+		{{js-select content=select.content selectedValue=select.value class="form-control" action="updateValue"}}
 	{{/if}}
 	{{select.separator}}
 {{/each}}
