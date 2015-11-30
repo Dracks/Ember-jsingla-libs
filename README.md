@@ -43,6 +43,12 @@ A helper required by js-select
 A mixin to manage the main parts of a login window. It has js-login and js-login-form as templates to show it out of the 
 box. 
 
+## Transforms
+
+### Date
+
+It's a transform to serialize and deserialize a date without time
+
 ## Utils
 
 ### Feedback Message

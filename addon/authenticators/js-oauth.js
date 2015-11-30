@@ -1,5 +1,5 @@
 // addon/authenticators/bd-oauth.js
-import Ember from 'ember'
+import Ember from 'ember';
 import OAuth2PasswordGrant from 'ember-simple-auth/authenticators/oauth2-password-grant';
 //import ENV from 'ember-binding-libs/config/environment';
 
