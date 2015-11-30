@@ -11,4 +11,6 @@ test('it exists', function (assert) {
 	var m = moment("1986-07-21", "YYYY-MM-DD");
 	assert.equal(transform.deserialize("1986-07-21").toString(), m.toDate().toString());
 	assert.equal(transform.serialize(m.toDate()), "1986-07-21");
+	assert.equal(transform.serialize(null), null);
+	assert.equal(transform.deserialize(null), null);
 });
