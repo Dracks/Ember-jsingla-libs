@@ -1,1 +1,1 @@
-export { default } from 'ember-dracks-libs/templates/js-login';
+export { default } from 'ember-jsingla-libs/templates/js-login';

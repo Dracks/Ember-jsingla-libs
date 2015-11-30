@@ -1,1 +1,1 @@
-export { default } from 'ember-dracks-libs/styles/app'
+export { default } from 'ember-jsingla-libs/styles/app'

@@ -1,5 +1,5 @@
 {
-  "name": "ember-binding-libs",
+  "name": "ember-jsingla-libs",
   "version": "0.2.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:jsingla/ember-binding-libs.git"
+    "url": "https://github.com/Dracks/Ember-jsingla-libs"
   },
   "engines": {
     "node": ">= 0.10.0"

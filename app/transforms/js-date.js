@@ -1,1 +1,1 @@
-export { default } from 'ember-binding-libs/transforms/js-date';
+export { default } from 'ember-jsingla-libs/transforms/js-date';

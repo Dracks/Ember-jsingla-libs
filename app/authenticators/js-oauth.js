@@ -1,1 +1,1 @@
-export { default } from 'ember-dracks-libs/authenticators/js-oauth';
+export { default } from 'ember-jsingla-libs/authenticators/js-oauth';

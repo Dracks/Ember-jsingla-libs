@@ -1,1 +1,1 @@
-export { default } from 'ember-dracks-libs/components/js-select';
+export { default } from 'ember-jsingla-libs/components/js-select';

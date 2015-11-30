@@ -1,4 +1,4 @@
-# Ember-dracks-libs
+# Ember-jsingla-libs
 
 It's a group of components that I create for a project, but can be reused on a lot of them. 
 
