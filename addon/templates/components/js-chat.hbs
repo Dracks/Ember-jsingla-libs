@@ -8,9 +8,9 @@
 		</li>
 	{{/each}}
 </ul>
-<div class="js-chat-send  col-xs-12 col-sm-12">
-	{{input type="text" value=newMessageText enter="send"}}
-	<button {{action "send" }}>
+<div class="js-chat-send col-xs-12 col-sm-12">
+	{{textarea value=newMessageText enter="send" rows=8 class="form-control col-xs-12 col-sm-12"}}
+	<button {{action "send" }} class="btn btn-sm btn-default">
 		{{sendText}}
 	</button>
 </div>
