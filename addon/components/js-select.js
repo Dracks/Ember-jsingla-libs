@@ -28,14 +28,14 @@ export default Ember.Component.extend({
 	change(args){
 		const id=args.currentTarget.value;
 		const selectedValue = this.get('content').find( function (e){
-			console.log(e.get('id'));
-			console.log(id);
+			//console.log(e.get('id'));
+			//console.log(id);
 			return e.get('id')===id;
 		});
 
 		this.set('selectedValue', selectedValue);
 		this.sendAction('action', selectedValue);
-		console.log(selectedValue);
+		//console.log(selectedValue);
 	}
 
 });
