@@ -1,0 +1,16 @@
+<ul class="js-chat col-xs-12 col-sm-12">
+	<li class="load-more" {{action "_loadMore"}}>Load more</li>
+	{{#each sortedListMessages as |message|}}
+		<li>
+			<span class="user-text">{{message.user.name}}</span>
+			<span class="message">{{message.text}}</span>
+			<span class="time">{{message.ts}}</span>
+		</li>
+	{{/each}}
+</ul>
+<div class="js-chat-send  col-xs-12 col-sm-12">
+	{{input type="text" value=newMessageText enter="send"}}
+	<button {{action "send" }}>
+		{{sendText}}
+	</button>
+</div>
