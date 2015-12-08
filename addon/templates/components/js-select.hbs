@@ -3,7 +3,7 @@
 {{#if hasPrompt}}
 	<option>{{prompt}}</option>
 {{/if}}
-{{#each content key="@index" as |item|}}
+{{#each renderedList key="@index" as |item|}}
 	<option value="{{item.id}}" selected={{is-equal item.id selectedValue.id}}>
 		{{item.name}}
 	</option>

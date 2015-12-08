@@ -8,6 +8,7 @@ export default Ember.Component.extend({
 	content: null,
 	selectedValue: null,
 	prompt: null,
+	label:'name',
 
 	hasPrompt: Ember.computed('prompt', {
 		get(){
@@ -23,7 +24,23 @@ export default Ember.Component.extend({
 		if (!content) {
 			this.set('content', []);
 		}
+
+		var call = function () {
+			var label=this.get('label');
+			return this.get('content').map(function (e) {
+				console.log(e.get(label));
+				return Ember.Object.create({
+					id: e.get('id'),
+					name: e.get(label)
+				});
+			});
+		}.bind(this);
+		this.renderedList = Ember.computed('content.@each.'+this.get('label'), call);
+		this.labelObserver = Ember.observer('label', function (){
+			this.renderedList = Ember.computed('content.@each.'+this.get('label'), call);
+		}.bind(this))
 	}),
+
 
 	change(args){
 		const id=args.currentTarget.value;
