@@ -2,20 +2,21 @@ import Ember from 'ember';
 import required from '../../../utils/required';
 import { module, test } from 'qunit';
 
-module('Unit | Utility | required fields');
+module('Unit | Utility | required object');
 
 // Replace this with your real tests.
 test('Check errors', function (assert) {
 	var object=Ember.Object.create({
-		"exist": "ok"
+		"exist": moment("1986-07-21").toDate(),
+		"null": moment("1900-01-01").toDate()
 	});
 
-	var errors = required.input(object, ["exist"]);
+	var errors = required.date(object, ["exist"]);
 	assert.equal(errors.length,0, "The field was ok");
 
-	errors=required.input(object, ["nonexist"]);
+	errors=required.date(object, ["nonexist"]);
 	assert.equal(errors.length,1, "It doesn't exists");
 
-	errors=required.input(object, ["exist", "nonexist"], 3);
-	assert.equal(errors.length,2, "Should have a minimum length check");
+	errors=required.date(object, ["exist", "null", "nonexist"]);
+	assert.equal(errors.length,2, "Chech the null value data");
 });

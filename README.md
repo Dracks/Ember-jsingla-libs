@@ -57,8 +57,9 @@ A group of functions to create an object with the 4 main elements used on js-fee
 includes empty (to create a non-showed message object), base (a base object, with info type), error (the same as base, 
 but with error type) and warning.
  
-### Required fields & Required Select Fields
+### Required (date, input & select)
 
-This two functions was made to easy check if a group of fields (of a form) where empty or not. You put an object with
+An object with three functions made to easy check if a group of fields (of a form) where empty or not. You put an object with
  the fields as first argument, the fields names as an array in the second argument and it checks if there is a null value
- if it has more than x length (this requires the third argument of required-fields) or an id (only for select fields). 
+ if it has more than x length (this requires the third argument of required-fields) or an id (only for select fields) or 
+ if a date is 1900-01-00. 

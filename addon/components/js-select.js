@@ -28,7 +28,7 @@ export default Ember.Component.extend({
 		var call = function () {
 			var label=this.get('label');
 			return this.get('content').map(function (e) {
-				console.log(e.get(label));
+				//console.log(e.get(label));
 				return Ember.Object.create({
 					id: e.get('id'),
 					name: e.get(label)

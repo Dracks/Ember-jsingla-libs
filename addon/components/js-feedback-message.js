@@ -27,13 +27,13 @@ export default Ember.Component.extend({
 	}),
 	showObserver: Ember.computed('isShowed',function (){
 		if (this.get('isShowed')===true){
-			var _this=this;
+			//var _this=this;
 			var timer=this.get('timer');
 			if (parseInt(timer)>0){
 				var tId=Ember.run.later(function (){
-					_this.hide();
-					_this.set('timerId', null);
-				}, parseInt(timer)*1000);
+					this.hide();
+					this.set('timerId', null);
+				}.bind(this), parseInt(timer)*1000);
 				this.set('timerId', tId);
 			} else {
 				this.set('timerId', null);
